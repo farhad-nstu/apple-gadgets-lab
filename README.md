@@ -1,4 +1,4 @@
-# Food delivery app
+# Apple Gadgets Lab
 
 # Getting started
 
@@ -8,11 +8,11 @@ Please check the official laravel installation guide for server requirements bef
  
 Clone the repository
 
-    git clone https://github.com/BrainStation23HR/PHP_Forhad
+    git clone https://github.com/farhad-nstu/apple-gadgets-lab.git
 
 Switch to the repo folder
 
-    cd food-delivery-app
+    cd apple-gadgets
 
 Install all the dependencies using composer
 
@@ -42,9 +42,15 @@ You can now access the server at http://localhost:8000
     php artisan migrate
     php artisan serve
 
-## Docker
+## Docker: To run this project in Docker
+    First ensure doskcer installed in your local pc otherwise install docker from google
+
+    Then run the following commands in your terminal
     docker compose build
     docker compose up -d
+
+    To run php bash in your command line run the following comand
+    docker compose exec -it php bash
     
 ## Database seeding
 
@@ -55,10 +61,6 @@ Run the database seeder and you're done
 ***Note*** : It's recommended to have a clean database before seeding. You can refresh your migrations at any point to clean the database by running the following command
 
     php artisan migrate:refresh
-    
-# Testing
-
-    php artisan test
 
 ## Folders
 
@@ -71,8 +73,6 @@ Run the database seeder and you're done
 - `database/migrations` - Contains all the database migrations
 - `database/seeds` - Contains the database seeder
 - `routes` - Contains all the api routes defined in api.php file
-- `tests` - Contains all the application tests
-- `tests/Feature` - Contains all the api tests
 
 ## Environment variables
 
