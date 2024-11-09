@@ -55,6 +55,17 @@ class SupplierRepository
         }
     }
 
+    public function getSupplierDetails($id) : Model
+    {
+        try {
+            return $this->model->findOrFail($id);
+        } catch (\PDOException $e) {
+            throw new Exception("Database error: " . $e->getMessage(), 500);
+        } catch (\Exception $e) {
+            throw new Exception("An unexpected error occurred: " . $e->getMessage(), 500);
+        }
+    }
+
     public function updateSupplier(array $data, $id): Model
     {
         try {

@@ -63,6 +63,17 @@ class ProductRepository
         }
     }
 
+    public function getProductDetails($id) : Model
+    {
+        try {
+            return $this->model->findOrFail($id);
+        } catch (\PDOException $e) {
+            throw new Exception("Database error: " . $e->getMessage(), 500);
+        } catch (\Exception $e) {
+            throw new Exception("An unexpected error occurred: " . $e->getMessage(), 500);
+        }
+    }
+
     public function updateProduct(array $data, $id): Model
     {
         try {

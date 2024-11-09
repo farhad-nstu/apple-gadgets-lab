@@ -69,6 +69,32 @@ class SupplierService
         }
     }
 
+    public function getSupplierDetails($id)
+    {
+        try{
+            $supplier = $this->supplierRepository->getSupplierDetails($id);
+            if($supplier) {
+                return [
+                    Response::HTTP_OK,
+                    "Supplier found successfully",
+                    $supplier
+                ];
+            } else {
+                return [
+                    Response::HTTP_OK,
+                    "Data fetch failed",
+                    []
+                ];
+            }
+        } catch(\Exception $e){
+            return [
+                $e->getCode(),
+                "Something went wrong",
+                []
+            ];
+        }
+    }
+
     public function updateSupplier(array $request, $id) : array
     {
         try{
@@ -108,7 +134,7 @@ class SupplierService
             } else {
                 return [
                     Response::HTTP_OK,
-                    "Data store failed",
+                    "Data remove failed",
                     []
                 ];
             }

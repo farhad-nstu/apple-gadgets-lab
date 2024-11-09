@@ -47,6 +47,20 @@ class SupplierController extends Controller
         }
     }
 
+    public function getSupplierDetails($id)
+    {
+        try{
+            [$code, $message, $data]  = $this->supplierService->getSupplierDetails($id);
+            if($code === Response::HTTP_OK){
+                return $this->success($data, $message, $code);
+            }
+            return $this->error($message, null, $code, $data);
+        }catch(\Exception $e){
+            return $e->getMessage();
+            return $this->error('Something went wrong!', $e->getTrace(), 500);
+        }
+    }
+
     public function updateSupplier(SupplierUpdateRequest $request, $id)
     {
         try{

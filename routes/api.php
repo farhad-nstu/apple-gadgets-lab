@@ -28,12 +28,14 @@ Route::post('/category/store', [CategoryController::class, 'storeCategory']);
 
 // product routes
 Route::get('/product/list', [ProductController::class, 'getProductList']);
+Route::get('/product/details/{id}', [ProductController::class, 'getProductDetails']);
 Route::post('/product/store', [ProductController::class, 'storeProduct']);
 Route::put('/product/update/{id}', [ProductController::class, 'updateProduct']);
 Route::delete('/product/delete/{id}', [ProductController::class, 'deleteProduct']);
 
 // supplier routes
 Route::get('/supplier/list', [SupplierController::class, 'getSupplierList']);
+Route::get('/supplier/details/{id}', [SupplierController::class, 'getSupplierDetails']);
 Route::post('/supplier/store', [SupplierController::class, 'storeSupplier']);
 Route::put('/supplier/update/{id}', [SupplierController::class, 'updateSupplier']);
 Route::delete('/supplier/delete/{id}', [SupplierController::class, 'deleteSupplier']);

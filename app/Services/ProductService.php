@@ -69,6 +69,32 @@ class ProductService
         }
     }
 
+    public function getProductDetails($id)
+    {
+        try{
+            $product = $this->productRepository->getProductDetails($id);
+            if($product) {
+                return [
+                    Response::HTTP_OK,
+                    "Product found successfully",
+                    $product
+                ];
+            } else {
+                return [
+                    Response::HTTP_OK,
+                    "Data store failed",
+                    []
+                ];
+            }
+        } catch(\Exception $e){
+            return [
+                $e->getCode(),
+                "Something went wrong",
+                []
+            ];
+        }
+    }
+
     public function updateProduct(array $request, $id) : array
     {
         try{
@@ -108,7 +134,7 @@ class ProductService
             } else {
                 return [
                     Response::HTTP_OK,
-                    "Data store failed",
+                    "Data remove failed",
                     []
                 ];
             }
