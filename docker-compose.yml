@@ -3,7 +3,7 @@ version: "3.6"
 services:
     nginx:
         image: nginx:1.21.3-alpine
-        container_name: fda_nginx
+        container_name: apple_gadgets_lab_nginx
         ports:
             - 9090:9090
         volumes:
@@ -13,7 +13,7 @@ services:
         links:
             - php
     php:
-        container_name: fda_php_fpm
+        container_name: apple_gadgets_lab_php_fpm
         build:
             context: ./docker-conf/php
         volumes:
@@ -32,7 +32,7 @@ services:
         links:
            - db
     db:
-        container_name: fda_db
+        container_name: apple_gadgets_lab_db
         image: mariadb
         ports:
             - "${DB_PORT}:3308"

@@ -173,3 +173,6 @@
 172.23.0.1 - - [09/Nov/2024:06:13:49 +0000] "GET /api/purchase-orders HTTP/1.1" 200 3451 "-" "Apidog/1.0.0 (https://apidog.com)" "-"
 172.23.0.1 - - [09/Nov/2024:06:14:50 +0000] "GET /api/product/list?perPage=10 HTTP/1.1" 200 821 "-" "Apidog/1.0.0 (https://apidog.com)" "-"
 172.23.0.1 - - [09/Nov/2024:06:32:59 +0000] "GET /api/purchase-orders HTTP/1.1" 200 3451 "-" "Apidog/1.0.0 (https://apidog.com)" "-"
+172.25.0.1 - - [09/Nov/2024:10:56:00 +0000] "GET /api/supplier/list?name=y HTTP/1.1" 200 311 "-" "Apidog/1.0.0 (https://apidog.com)" "-"
+172.25.0.1 - - [09/Nov/2024:10:57:19 +0000] "OPTIONS /api/product/store HTTP/1.1" 204 0 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" "-"
+172.25.0.1 - - [09/Nov/2024:10:57:19 +0000] "POST /api/product/store HTTP/1.1" 400 111 "http://localhost:8080/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" "-"

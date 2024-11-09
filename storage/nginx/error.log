@@ -182,3 +182,62 @@
 2024/11/09 00:44:02 [warn] 24#24: *30 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 172.23.0.1, server: _, request: "GET /api/product/list HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:9090"
 2024/11/09 00:53:36 [warn] 25#25: *45 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/2/00/0000000002 while reading upstream, client: 172.23.0.1, server: _, request: "GET /api/product/list?category_id=1 HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:9090"
 2024/11/09 01:02:48 [warn] 24#24: *52 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/3/00/0000000003 while reading upstream, client: 172.23.0.1, server: _, request: "GET /api/product/list HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "localhost:9090"
+2024/11/09 06:44:22 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/11/09 06:44:22 [notice] 25#25: gracefully shutting down
+2024/11/09 06:44:22 [notice] 25#25: exiting
+2024/11/09 06:44:22 [notice] 29#29: gracefully shutting down
+2024/11/09 06:44:22 [notice] 29#29: exiting
+2024/11/09 06:44:22 [notice] 28#28: gracefully shutting down
+2024/11/09 06:44:22 [notice] 28#28: exiting
+2024/11/09 06:44:22 [notice] 27#27: gracefully shutting down
+2024/11/09 06:44:22 [notice] 27#27: exiting
+2024/11/09 06:44:22 [notice] 24#24: gracefully shutting down
+2024/11/09 06:44:22 [notice] 26#26: gracefully shutting down
+2024/11/09 06:44:22 [notice] 26#26: exiting
+2024/11/09 06:44:22 [notice] 31#31: gracefully shutting down
+2024/11/09 06:44:22 [notice] 31#31: exiting
+2024/11/09 06:44:22 [notice] 30#30: gracefully shutting down
+2024/11/09 06:44:22 [notice] 24#24: exiting
+2024/11/09 06:44:22 [notice] 30#30: exiting
+2024/11/09 06:44:22 [notice] 26#26: exit
+2024/11/09 06:44:22 [notice] 29#29: exit
+2024/11/09 06:44:22 [notice] 28#28: exit
+2024/11/09 06:44:22 [notice] 27#27: exit
+2024/11/09 06:44:22 [notice] 25#25: exit
+2024/11/09 06:44:22 [notice] 24#24: exit
+2024/11/09 06:44:22 [notice] 31#31: exit
+2024/11/09 06:44:22 [notice] 30#30: exit
+2024/11/09 06:44:22 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2024/11/09 06:44:22 [notice] 1#1: worker process 27 exited with code 0
+2024/11/09 06:44:22 [notice] 1#1: worker process 28 exited with code 0
+2024/11/09 06:44:22 [notice] 1#1: worker process 29 exited with code 0
+2024/11/09 06:44:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/11/09 06:44:22 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/11/09 06:44:22 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/11/09 06:44:22 [notice] 1#1: worker process 26 exited with code 0
+2024/11/09 06:44:22 [notice] 1#1: worker process 31 exited with code 0
+2024/11/09 06:44:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/11/09 06:44:22 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2024/11/09 06:44:22 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2024/11/09 06:44:22 [notice] 1#1: worker process 25 exited with code 0
+2024/11/09 06:44:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/11/09 06:44:22 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2024/11/09 06:44:22 [notice] 1#1: worker process 30 exited with code 0
+2024/11/09 06:44:22 [notice] 1#1: signal 29 (SIGIO) received
+2024/11/09 06:44:22 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2024/11/09 06:44:22 [notice] 1#1: worker process 24 exited with code 0
+2024/11/09 06:44:22 [notice] 1#1: exit
+2024/11/09 10:55:53 [notice] 1#1: using the "epoll" event method
+2024/11/09 10:55:53 [notice] 1#1: nginx/1.21.3
+2024/11/09 10:55:53 [notice] 1#1: built by gcc 10.3.1 20210424 (Alpine 10.3.1_git20210424) 
+2024/11/09 10:55:53 [notice] 1#1: OS: Linux 5.15.0-124-generic
+2024/11/09 10:55:53 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2024/11/09 10:55:53 [notice] 1#1: start worker processes
+2024/11/09 10:55:53 [notice] 1#1: start worker process 32
+2024/11/09 10:55:53 [notice] 1#1: start worker process 33
+2024/11/09 10:55:53 [notice] 1#1: start worker process 34
+2024/11/09 10:55:53 [notice] 1#1: start worker process 35
+2024/11/09 10:55:53 [notice] 1#1: start worker process 36
+2024/11/09 10:55:53 [notice] 1#1: start worker process 37
+2024/11/09 10:55:53 [notice] 1#1: start worker process 38
+2024/11/09 10:55:53 [notice] 1#1: start worker process 39

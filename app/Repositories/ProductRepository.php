@@ -48,7 +48,7 @@ class ProductRepository
         try {
             $productData = [
                 'name' => $data['name'],
-                'category_id' => $data['category_id'],
+                'category_id' => $data['category_id'] ?? 1,
                 'price' => $data['price'],
                 'initial_stock_quantity' => $data['initial_stock_quantity'],
                 'current_stock_quantity' => $data['initial_stock_quantity']
