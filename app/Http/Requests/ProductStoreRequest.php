@@ -25,11 +25,9 @@ class ProductStoreRequest extends FormRequest
                 Rule::unique('products', 'name')
                     ->where('category_id', $this->category_id),
             ],
-            'category_id' => [   // applies exists non deleted rule to category_id
-                'required',
-                Rule::exists('categories', 'id')->whereNull('deleted_at')
-            ],
+            'category_id' => 'required|exists:categories,id',
             'price' => 'required|numeric',
+            'initial_stock_quantity' => 'required|numeric'
         ];
     }
 }

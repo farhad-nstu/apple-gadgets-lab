@@ -20,10 +20,9 @@ class ProductUpdateRequest extends FormRequest
                     ->where('category_id', $this->category_id)
                     ->ignore($this->route('product')), // Exclude the current product ID from uniqueness check
             ],
-            'category_id' => [   // applies exists non deleted rule to category_id
-                Rule::exists('categories', 'id')->whereNull('deleted_at')
-            ],
+            'category_id' => 'exists:categories,id',
             'price' => 'numeric',
+            'current_stock_quantity' => 'numeric'
         ];
     }
 }
